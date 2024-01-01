@@ -21,7 +21,7 @@ class MainScene extends Phaser.Scene {
         });
     }
 
-    collectStar(player, star) {
+    collectStar(player: any, star: any) {
         star.disableBody(true, true);
         if (this.score === undefined) throw new Error("scoreText is undefined");
         this.score += 10;
@@ -53,7 +53,7 @@ class MainScene extends Phaser.Scene {
         }
     }
 
-    hitBomb(player, bomb) {
+    hitBomb(player: any, _bomb: any) {
         this.physics.pause();
 
         player.setTint(0xff0000);
